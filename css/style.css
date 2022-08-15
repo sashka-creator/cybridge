@@ -6,6 +6,7 @@ body {
     background: #012035;
     overflow-x: hidden;
     height: initial;
+    background: #012035;
 
     background: radial-gradient(61% 61% at 50% 50.02%, #012150 0%, #011335 100%);
 }
@@ -89,7 +90,8 @@ button {
 }
 
 .nav, .nav__item {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
 
     font-weight: 500;
     font-size: 16px;
@@ -169,7 +171,7 @@ button {
 
 .intro__bk {
     background: rgba(43, 43, 43, 0);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(0px);
 }
 
 .intro__inner {
@@ -1948,10 +1950,6 @@ button {
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-
-    .header {
-        display: none;
     }
 
     .header__adaptive {
