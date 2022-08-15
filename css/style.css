@@ -90,8 +90,7 @@ button {
 }
 
 .nav, .nav__item {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
 
     font-weight: 500;
     font-size: 16px;
@@ -99,6 +98,12 @@ button {
     text-decoration: none;
 
     color: #FFFFFF;
+}
+
+.nav.more {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav__item {
@@ -163,10 +168,6 @@ button {
     margin-top: 100px;
     height: 400px;
     width: 70%;
-    background: rgba(43, 43, 43, 0.2);
-    backdrop-filter: blur(43px);
-    -webkit-backdrop-filter: blur(43px);
-    border-radius: 50px;
 }
 
 .intro__bk {
