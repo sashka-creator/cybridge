@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
     height: initial;
 
-    background: radial-gradient(50% 50% at 50% 50%, #012150 0%, #011335 100%);
+    background: radial-gradient(61% 61% at 50% 50.02%, #012150 0%, #011335 100%);
 }
 
 p {
@@ -163,12 +163,13 @@ button {
     width: 70%;
     background: rgba(43, 43, 43, 0.2);
     backdrop-filter: blur(43px);
+    -webkit-backdrop-filter: blur(43px);
     border-radius: 50px;
 }
 
 .intro__bk {
     background: rgba(43, 43, 43, 0);
-    backdrop-filter: blur(0px);
+    backdrop-filter: blur(1px);
 }
 
 .intro__inner {
@@ -587,6 +588,7 @@ button {
     z-index: 200;
     transition: .3s;
     border-radius: 15px;
+    width: 100%;
 }
 
 .project:hover {
@@ -597,6 +599,19 @@ button {
 .project__inner {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.project__item__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.project__dopinfo, .project__item__text__text {
+    display: block;
 }
 
 .project__item__text__title {
@@ -688,6 +703,11 @@ button {
 .portfolio__nav__item.active, .portfolio__nav__item:hover {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
+}
+
+.project__link {
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -840,6 +860,7 @@ button {
     position: absolute;
     transition: 0.5s;
 }
+
 
 .light {
     left: -30px;
@@ -1253,6 +1274,7 @@ button {
 
     background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .modal.visib {
@@ -1457,6 +1479,14 @@ button {
 
 .project__about__btn__more {
     display: none;
+}
+
+.project__link {
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-between;
+
+    color: #ffffff;
 }
 
 .project__about__btn__arrows {
@@ -1712,6 +1742,19 @@ button {
     display: none;
 }
 
+.footer__item__title__up {
+    margin-bottom: 36px;
+}
+
+.header__adaptive {
+    display: none;
+}
+
+.project__inner__img__wrap {
+    width: 700px;
+    height: 247px;
+}
+
 @media (max-width: 1250px) {
 
     .container {
@@ -1761,6 +1804,32 @@ button {
 
     .footer__inner {
         padding-bottom: 70px;   
+    }
+
+    .nav__item.more:first-child {
+        margin-left: 0;
+    }
+
+    .nav__item.more, .nav__item.logo {
+        margin-left: 102px;
+    }
+
+    .project__item__text__text {
+        width: 300px;
+    }
+
+    .footer {
+        margin-top: 70px;
+        margin-bottom: 35px;
+    }
+
+    .project__item__text__subtitle {
+        width: auto;   
+    }
+
+    .project__inner__img__wrap {
+        width: 730px;
+        overflow: hidden;
     }
 
 }
@@ -1874,12 +1943,77 @@ button {
         display: none;
         font-size: 15px;
     }
+
+    .header__adaptive__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .header__adaptive {
+        display: block;
+        margin-top: 40px;
+    }
+
+    .nav__adaptive__item {
+        font-size: 15px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .nav__adaptive__item {
+        margin-right: 90px;
+    }
+
+    .nav__adaptive__item:last-child {
+        margin-right: 0;
+    }
+
+    .backmenu__item {
+        font-size: 15px;
+    }
+
+    .blockchain, .bigdata {
+        font-size: 15px;
+    }
+
+    .project__dopinfo {
+        display: none;
+    }
+
+    .project__item__text__text {
+        width: 100%;
+    }
+
+    .project__inner__img__wrap {
+        max-height: 220px;
+        border-radius: 15px;
+    }
+
+    .portfolio__rec {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .portfolio {
+        margin-top: 60px;
+    }
+
+    .portfolio__nav {
+        margin-top: 60px;
+    }
 }
 
 @media (max-width: 770px) {
 
     .container {
         max-width: 440px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .nav {
@@ -1949,7 +2083,7 @@ button {
     }
 
     .scope__item__text {
-        width: 94%;
+        width: 90%;
     }
 
     .scope__text {
@@ -2013,8 +2147,142 @@ button {
         margin-top: -30px;
     }
 
+    .intro__bk {
+        width: 90%;
+    }
+
+    .nav__adaptive__item {
+        display: none;
+    }
+
+    .backmenu {
+        display: none;
+    }
+
+    .blockchain, .bigdata {
+        font-size: 14px;
+    }
+
+    .menu__inner {
+        margin-top: 90px;
+    }
+
+    .project__inner__img {
+        position: absolute;
+    }
+
 }
 
-@media (max-width: 470px) {
+@media (max-width: 460px) {
     
+    .intro {
+        height: 550px;
+
+        background: url(../img/adaptive-bk-1.png);
+        background-position: center center;
+    }
+    
+
+    .intro__inner {
+        padding-top: 195px;
+    }
+
+    .scope__item__title {
+        margin-bottom: 5px;
+    }
+
+    .intro__logo {
+        width: 80%;
+    }
+
+    .phone, .phone.value {
+        font-size: 14px;
+    }
+    
+    .footer__item__link {
+        font-size: 14px;
+    }
+
+
+}
+
+@media (max-width: 380px) {
+    .intro__logo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 418px) {
+
+    .scope__img {
+        display: none;
+    }
+
+    .scope__item__text {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .workspace__rec {
+        width: 80%;
+    }
+
+    .scope {
+        margin-bottom: 80px;
+    }
+
+    .workspace__text {
+        margin-bottom: 15px;
+    }
+
+    .intro__arrows__con {
+        height: 35px;
+        width: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer__inner {
+        display: block;
+    }
+
+    .footer__item:nth-child(3) {
+        padding-top: 40px;
+    }
+
+    .footer__item__title__up {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    
+    .footer__item__title__down {
+        display: flex;
+    }
+
+    .footer__item__link.social {
+        margin-right: 50px;
+    }
+
+    .footer__item__link {
+        margin-bottom: 0;
+    }
+
+    .footer__inner {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+}
+
+@media (max-width: 270px) {
+
+    .intro__subtitle {
+        font-size: 14px;
+    }
+
+    .intro__logo {
+        width: 100%;
+    }
+
 }

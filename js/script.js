@@ -92,6 +92,7 @@ jQuery(document).ready(function($) {
   });
 });
 
+
 var body = document.querySelector('body')
 window.addEventListener('scroll', (event) => {
   let scroll = this.scrollY;  
