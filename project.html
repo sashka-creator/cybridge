@@ -21,18 +21,33 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <div class="nav">
-                    <a href="https://sashka-creator.github.io/cybridge/projects.html" class="nav__item">Projects</a>
-                    <a href="https://sashka-creator.github.io/cybridge/about.html" class="nav__item">About</a>
+                <div class="nav more">
+                    <a href="https://sashka-creator.github.io/cybridge/projects.html" class="nav__item more">Projects</a>
+                    <a href="https://sashka-creator.github.io/cybridge/about.html" class="nav__item more">About</a>
                     <a href="https://sashka-creator.github.io/cybridge/index.html" class="nav__item logo">
                         <img src="img/logo-footer.svg" alt="">
                     </a>
-                    <a href="https://sashka-creator.github.io/cybridge/team.html" class="nav__item">Team</a>
-                    <a href="https://sashka-creator.github.io/cybridge/contacts.html" class="nav__item">Contacts</a>
+                    <a href="https://sashka-creator.github.io/cybridge/team.html" class="nav__item more">Team</a>
+                    <a href="https://sashka-creator.github.io/cybridge/contacts.html" class="nav__item more">Contacts</a>
                 </div>
             </div>
         </div>
     </header>
+
+    <section class="header__adaptive">
+        <div class="container">
+            <div class="header__adaptive__inner">
+                <img src="img/logo-adaptive.svg" alt="" class="logo__adaptive">
+                <div class="nav__adaptive__adaptive">
+                    <a href="#" class="nav__adaptive__item more">Projects</a>
+                    <a href="#" class="nav__adaptive__item more">About</a>
+                    <a href="#" class="nav__adaptive__item more">Team</a>
+                    <a href="#" class="nav__adaptive__item more">Contacts</a>
+                </div>
+                <img src="img/burger.png" alt="" class="burger">
+            </div>
+        </div>
+    </section>
 
     <section class="menu">
         <div class="container">
@@ -110,6 +125,55 @@
         </div>
     </section>
 
+    <!-- <section class="project__slider animate__animated animate__fadeInUp wow">
+        <div class="container">
+            <div class="projects__slider__inner">
+                <div class="swiper-container project">
+                    <div class="swiper-wrapper project">
+
+                        <div class="swiper-slide project">
+                            <div class="project__roadmap__item__inner">
+                                <p>Learning</p>
+                                <img src="img/learning.svg" alt="" class="project__roadmap__item__icon">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide project">
+                            <div class="project__roadmap__item__inner">
+                                <p>Design</p>
+                                <img src="img/projecting.svg" alt="" class="project__roadmap__item__icon">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide project">
+                            <div class="project__roadmap__item__inner">
+                                <p>Front-end</p>
+                                <img src="img/planning.svg" alt="" class="project__roadmap__item__icon">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide project">
+                            <div class="project__roadmap__item__inner">
+                                <p>Add SC</p>
+                                <img src="img/devops.svg" alt="" class="project__roadmap__item__icon">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide project">
+                            <div class="project__roadmap__item__inner">
+                                <p>Done project</p>
+                                <img src="img/deploy.svg" alt="" class="project__roadmap__item__icon">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    
+
     <section class="project__about animate__animated animate__fadeInUp">
         <div class="container">
             <div class="project__about__inner">
@@ -138,9 +202,16 @@
                     </div>
 
                 </div>
-
+ 
                 <div class="project__about__inner__slider">
-                    <img src="img/project-about-1.png" alt="" class="project__about__inner__slider__item">
+                    <div class="project__image__wrap">
+                        <img src="img/project-about-1.png" alt="" class="project__about__inner__slider__item">
+                    </div>
+                </div>
+                <div class="project__about__inner__second">
+                    <h2 class="project__about__title">Our project</h2>
+                    <p class="project__about__text">A common walking alley has been formed here, which unites quiet courtyards and active zones. At the same time, the pedestrian space in the cozy courtyards </p>
+                    <p class="project__about__text">A common walking alley has been formed here, which unites quiet courtyards and active zones. At the same time, the pedestrian space in the cozy courtyards </p>
                 </div>
                 
             </div>
@@ -173,7 +244,7 @@
         </div>
     </section>
     
-    <footer class="footer animate__animated animate__fadeInUp wow">
+    <footer class="footer animate__animated animate__slideInUp wow">
         <div class="container">
             <div class="footer__inner">
 
@@ -202,12 +273,16 @@
                     <a href="#" class="footer__item__link">Contancts</a>
                 </div>
 
-                <div class="footer__item">
+                <div class="footer__item social">
                     <p class="footer__item__title">Social Media</p>
-                    <a href="#" class="footer__item__link">Instagram</a>
-                    <a href="#" class="footer__item__link">Facebook</a>
-                    <a href="#" class="footer__item__link">Twitter</a>
-                    <a href="#" class="footer__item__link">LinkedIn</a>
+                    <div class="footer__item__title__up">
+                        <a href="#" class="footer__item__link social">Instagram</a>
+                        <a href="#" class="footer__item__link social">Facebook</a>
+                    </div>
+                    <div class="footer__item__title__down">
+                        <a href="#" class="footer__item__link social">Twitter</a>
+                        <a href="#" class="footer__item__link social">LinkedIn</a>
+                    </div>
                 </div>
 
                 <div class="footer__item">

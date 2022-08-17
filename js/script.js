@@ -46,6 +46,54 @@ $(document).ready(function() {
     speed: 1000,
   });
 
+  
+  var swiper = new Swiper('.project__slider .swiper-container', {
+    
+    
+    slidesPerView: 3,
+    spaceBetween: 40,
+
+    autoplay: {
+        delay: 3000,
+    },
+
+    speed: 1000,
+  });
+    
+  var swiper = new Swiper('.team__slider__inner .swiper-container', {
+    
+    
+    slidesPerView: 2,
+    spaceBetween: 20,
+
+    autoplay: {
+        delay: 3000,
+    },
+
+    speed: 1000,
+
+    breakpoints: {
+
+      10: {
+        slidesPerView: 1,
+      },
+
+      460: {
+        slidesPerView: 1,
+      },
+
+      770: {
+        slidesPerView: 2,
+      },
+
+      1000: {
+        slidesPerView: 2,
+        
+      },
+  },
+
+  });
+
   $(".project__about__btn").click(function(){
     $(".project__about__text").slideUp('slow');
     $(".project__about__item").slideUp('slow');
@@ -116,7 +164,7 @@ window.addEventListener('scroll', (event) => {
 
   if(scroll > 300) {
     $(".cube__item__item-1").css("top", "185px");
-    $(".cube__item__item-1").css("right", "376px");
+    $(".cube__item__item-1").css("right", "377px");
   }
 
   if(scroll > 600) {
@@ -126,14 +174,14 @@ window.addEventListener('scroll', (event) => {
 
   if(scroll > 900) {
     $(".cube__item__item-3").css("top", "276px");
-    $(".cube__item__item-3").css("right", "230px");
+    $(".cube__item__item-3").css("right", "229px");
     $(".cube__item__item-10").css("top", "186px");
     $(".cube__item__item-10").css("right", "229px");
   }
 
   if(scroll > 1200) {
-    $(".cube__item__item-4").css("left", "174px");
-    $(".cube__item__item-4").css("bottom", "113px");
+    $(".cube__item__item-4").css("left", "178px");
+    $(".cube__item__item-4").css("bottom", "97px");
     $(".cube__item__item-9").css("top", "94px");
     $(".cube__item__item-9").css("right", "229px");
   }
