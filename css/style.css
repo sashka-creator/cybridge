@@ -2469,11 +2469,16 @@ button {
 
 @media (max-width: 770px) {
 
+    body {
+        background-color: #012136;
+    }
+
     .container {
         max-width: 440px;
         padding-left: 20px;
         padding-right: 20px;
     }
+    
 
     .intro__logo {
         top: 103%;
