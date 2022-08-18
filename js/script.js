@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
   });
 
 $(document).ready(function() {
-    $('.contact__board__active__btn, .close').click(function(event) {
+    $('.contact__board__active__btn, .close, .contact__board__active__name').click(function(event) {
       $('.modal').toggleClass('visib');
     });
   });
@@ -215,4 +215,5 @@ $(document).ready(function() {
     $('.map').attr('height', '300');
   }
 });
+
 
