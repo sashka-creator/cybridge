@@ -1308,6 +1308,92 @@ button {
     width: 40%;
 }
 
+.burger__modal {
+    width: 100%;
+    position: fixed;
+    display: block;
+    top: -100vh;
+    visibility: hidden;
+
+    transition: 1s;
+
+    z-index: 1000;
+
+    background: rgba(32, 32, 32, 0.25);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+.burger__modal.visib {
+    top: 0;
+    visibility: visible;
+}
+
+.burger__modal__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.en, .ua {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.burger__modal__inner__item {
+    display: block;
+
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.burger__modal__inner__links {
+    display: block;
+}
+
+.modal__close {
+    margin-right: auto;
+}
+
+.burger__modal__inner__languages {
+    display: block;
+}
+
+.languages__rec {
+    width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.modal__close {
+    margin-bottom: 30px;
+}
+
+.burger__modal__inner__item {
+    margin-bottom: 30px;
+}
+
+.burger__modal__inner__item:last-child {
+    margin-bottom: 0;
+}
+
+.burger__modal__inner__languages__inner {
+    justify-content: center;
+}
+
+.burger__modal__inner__links {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.burger__modal.visible {
+    visibility: visible;
+}
+
 .circle {
     margin-right: 15px;
     width: 6px;
@@ -2127,6 +2213,28 @@ button {
         padding-right: 30px;
     }
 
+    .main__map__inner__left  {
+        max-width: 650px;
+    }
+
+    .google__map__text {
+        width: 490px;
+    }
+
+    .main__map__rec {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+
+    .google__map__text {
+        padding-right: 50px;
+    }
+
+    .google__map__inner {
+        height: 400px;
+    }
+
 }
 
 @media (max-width: 1000px) {
@@ -2465,12 +2573,64 @@ button {
         display: none;
     }
 
+    .main__map__inner {
+        display: block;
+    }
+
+    .main__map__inner__right  {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main__map__rec {
+        display: none;
+    }
+
+    .main__map__inner__left  {
+        max-width: 100%;
+    }
+
+    .main__map__inner__right__item {
+        display: block;
+    }
+
+    .main__map__inner {
+        padding-top: 60px;
+    }
+
+    .main__map__inner__right__item {
+        padding-right: 70px;
+    }
+
+    .main__map {
+        margin-bottom: 100px;
+    }
+
+    .main__map__inner__right {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .google__map__text__title.make {
+        padding-top: 40px;
+    }
+
+    .google__map__text {
+        padding-right: 40px;
+        padding-left: 60px;
+        width: 530px;
+    }
+    
+    .google__map__text__btn {
+        font-size: 15px;
+    }
+
 }
 
 @media (max-width: 770px) {
 
     body {
-        background-color: #012136;
+        background-color: #011335;;
     }
 
     .container {
@@ -2997,6 +3157,95 @@ button {
     .swiper-container.team, .swiper-slide.team, .team__item.adaptive {
         height: auto;
     }
+
+    .menu.contacts {
+        margin-bottom: 0;
+        display: none;
+    }
+
+    .main__map {
+        margin-top: 70px;
+    }
+
+    .main__map__inner__right {
+        margin-left: 0;
+    }
+
+    .main__map__inner__right__item {
+        padding-right: 0;
+    }
+    
+    .main__map__title {
+        font-size: 18px;
+    }
+
+    .main__map__address {
+        font-size: 15px;
+    }
+
+    .main__map__address {
+        width: 130px;
+    }
+    
+    .google__map__inner {
+        display: block;
+        overflow: visible;
+    }
+
+    .google__map__text {
+        width: auto;
+    }
+
+    .main__map__address {
+        margin-top: 15px;
+    }
+
+    .google__map__inner__wrapper {
+        overflow: hidden;
+        border-radius: 15px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .google__map__inner {
+        background: none;
+        height: auto;
+    }
+
+    .google__map__text__mail, .google__map__text__link {
+        font-size: 15px;
+    }
+
+    .google__map__text {
+        padding: 0;
+    }
+
+    .google__map__text__title.make {
+        padding-top: 0;
+    }
+
+    .google__map__text {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main__map__phone {
+        font-size: 14px;
+    }
+
+    .main__map__address {
+        font-size: 14px;
+    }
+
+    .main__map {
+        margin-bottom: 70px;
+    }
+
+    .google__map__text__item__2 {
+        margin-top: 30px;
+    }
+
 }
 
 @media (max-width: 460px) {
@@ -3030,6 +3279,15 @@ button {
 
     .nav__adaptive {
         padding-top: 0px;
+    }
+
+    .google__map__text {
+        margin-top: 50px;
+        display: block;
+    }
+
+    .main__map {
+        margin-top: 50px;
     }
 }
 

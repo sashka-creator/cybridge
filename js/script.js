@@ -13,6 +13,12 @@ $(document).ready(function() {
     });
   });
 
+$(document).ready(function() {
+    $('.burger, .modal__close').click(function(event) {
+      $('.burger__modal').toggleClass('visib');
+    });
+  });  
+
   var swiper = new Swiper('.slider .swiper-container', {
     
     
@@ -140,7 +146,6 @@ jQuery(document).ready(function($) {
   });
 });
 
-
 var body = document.querySelector('body')
 window.addEventListener('scroll', (event) => {
   let scroll = this.scrollY;  
@@ -186,3 +191,28 @@ window.addEventListener('scroll', (event) => {
     $(".cube__item__item-9").css("right", "229px");
   }
 })
+
+$(document).ready(function() {
+  var w = $(window).width(); 
+  if (w <= 1250) { 
+    $('.map').attr('width', '830');
+    $('.map').attr('height', '400');
+  }
+});
+
+$(document).ready(function() {
+  var w = $(window).width(); 
+  if (w <= 1000) { 
+    $('.map').attr('width', '830');
+    $('.map').attr('height', '400');
+  }
+});
+
+$(document).ready(function() {
+  var w = $(window).width(); 
+  if (w <= 770) { 
+    $('.map').attr('width', '440');
+    $('.map').attr('height', '300');
+  }
+});
+
