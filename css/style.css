@@ -271,9 +271,26 @@ button {
 
 .intro__logo {
     display: block;
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+}
+
+.intro__logo {
+    right: 0;
+    left: 0;
+}
+
+.intro__logo__wrapper {
+    margin-bottom: 110px;
+}
+
+.intro__arrows__con {
+    position: absolute;
+
+    right: 0;
+    left: 0;
 }
 
 .intro__arrows {
@@ -2737,6 +2754,10 @@ button {
         max-width: 100%;
     }
 
+    .intro__inner {
+        padding-top: 200px;
+    }
+
 }
 
 @media (max-width: 770px) {
@@ -2753,7 +2774,8 @@ button {
     
 
     .intro__logo {
-        top: 103%;
+        top: 55%;
+        max-width: 400px;
     }
 
     .nav {
@@ -3366,6 +3388,15 @@ button {
         margin-bottom: 20px;
     }
 
+    .header__inner {
+        padding-top: 30px;
+    }
+
+    .intro {
+        margin-top: -100px;
+
+    }
+
 }
 
 @media (max-width: 460px) {
@@ -3394,7 +3425,9 @@ button {
     }
 
     .intro__logo {
-        top: 90%;
+        top: 47%;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .nav__adaptive {
