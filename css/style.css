@@ -9,7 +9,7 @@ body {
     background: #012035;
 
     background: radial-gradient(61% 61% at 50% 50.02%, #012150 0%, #011335 100%);
-    background-color: none;
+    background-color: #011335;
 }
 
 p {
@@ -2763,7 +2763,7 @@ button {
 @media (max-width: 770px) {
 
     body {
-        background-color: #011335;;
+        background-color: #011335;
     }
 
     .container {
