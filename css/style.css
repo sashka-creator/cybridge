@@ -264,17 +264,15 @@ button {
     height: 1px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
 
     background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .intro__logo {
     display: block;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
 }
 
@@ -950,7 +948,7 @@ button {
     font-size: 16px;
 }
 
-.cube__item__item-1, .cube__item__item-2, .cube__item__item-3, .cube__item__item-4, .cube__item__item-5, .cube__item__item-6, .cube__item__item-7, .cube__item__item-8, .cube__item__item-9, .cube__item__item-10, .cube__item__item-11, .cube__item__item-12 {
+.cube__item__item-1, .cube__item__item-2, .cube__item__item-3, .cube__item__item-4, .cube__item__item-5, .cube__item__item-6, .cube__item__item-7, .cube__item__item-8, .cube__item__item-9, .cube__item__item-10, .cube__item__item-11, .cube__item__item-12, .cube__item__item-13, .cube__item__item-14, .cube__item__item-15 {
     position: absolute;
     transition: 0.5s;
 }
@@ -971,12 +969,13 @@ button {
 .cube__item__item-2 {
     top: 200px;
     right: 20px;
-    z-index: -20;
+    z-index: 20;
 }
 
 .cube__item__item-12 {
     top: 186px;
-    right: 78px;
+    right: 178px;
+    z-index: 120;
 }
 
 .cube__item__item-3 {
@@ -1029,6 +1028,30 @@ button {
     top: 229px;
     right: 154px;
     z-index: 50;
+}
+
+.cube__item__item-12 {
+    top: 260px;
+    right: 91px;
+    z-index: 130;
+}
+
+.cube__item__item-13 {
+    z-index: 129;
+    top: 340px;
+    right: 91px;
+}
+
+.cube__item__item-14 {
+    z-index: 128;
+    top: 365px;
+    right: 91px;
+}
+
+.cube__item__item-15 {
+    z-index: 125;
+    top: 394px;
+    right: 91px;
 }
 
 /* Project Dop */
@@ -2340,7 +2363,7 @@ button {
     }
 
     .intro__rec  {
-        margin-bottom: 75px;
+        margin-bottom: 45px;
     }
     
     .intro__inner {
