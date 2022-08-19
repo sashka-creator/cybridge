@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
     $(window).load(function() {
       setTimeout(function() {
         $('#preloader').fadeOut('slow', function() {});
-      }, 500);
+      });
   
     });
   });
@@ -164,6 +164,10 @@ window.addEventListener('scroll', (event) => {
     $(".cube__item__item-9").css("right", "232px");
     $(".cube__item__item-10").css("top", "136px");
     $(".cube__item__item-10").css("right", "229px");
+    $(".cube__item__item-12").css("top", "260px");
+    $(".cube__item__item-13").css("top", "340px");
+    $(".cube__item__item-14").css("top", "365px");
+    $(".cube__item__item-15").css("top", "394px");
   }
 
 
@@ -175,19 +179,24 @@ window.addEventListener('scroll', (event) => {
   if(scroll > 600) {
     $(".cube__item__item-2").css("top", "253px");
     $(".cube__item__item-2").css("right", "80px");
+    $(".cube__item__item-10").css("top", "186px");
+    $(".cube__item__item-10").css("right", "229px");
   }
 
   if(scroll > 900) {
     $(".cube__item__item-3").css("top", "276px");
     $(".cube__item__item-3").css("right", "229px");
-    $(".cube__item__item-10").css("top", "186px");
-    $(".cube__item__item-10").css("right", "229px");
+    $(".cube__item__item-3").css("right", "229px");
+    $(".cube__item__item-12").css("top", "270px");
+    $(".cube__item__item-13").css("top", "338px");
+    $(".cube__item__item-14").css("top", "353px");
+    $(".cube__item__item-15").css("top", "372px");
   }
 
   if(scroll > 1200) {
     $(".cube__item__item-4").css("left", "178px");
     $(".cube__item__item-4").css("bottom", "97px");
-    $(".cube__item__item-9").css("top", "94px");
+    $(".cube__item__item-9").css("top", "78px");
     $(".cube__item__item-9").css("right", "229px");
   }
 })
