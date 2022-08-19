@@ -3397,6 +3397,14 @@ button {
 
     }
 
+    .intro__logo {
+        position: static;
+    }
+
+    .intro__logo__wrapper {
+        margin-bottom: 20px;
+    }
+
 }
 
 @media (max-width: 460px) {
@@ -3425,7 +3433,6 @@ button {
     }
 
     .intro__logo {
-        top: 47%;
         padding-left: 20px;
         padding-right: 20px;
     }
