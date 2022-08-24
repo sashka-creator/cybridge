@@ -78,6 +78,11 @@ $(document).ready(function() {
 
     speed: 1000,
 
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
     breakpoints: {
 
       10: {
@@ -196,7 +201,7 @@ window.addEventListener('scroll', (event) => {
   if(scroll > 1200) {
     $(".cube__item__item-4").css("left", "178px");
     $(".cube__item__item-4").css("bottom", "97px");
-    $(".cube__item__item-9").css("top", "78px");
+    $(".cube__item__item-9").css("top", "90px");
     $(".cube__item__item-9").css("right", "229px");
   }
 })
