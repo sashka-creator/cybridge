@@ -86,60 +86,11 @@ button {
     margin-right: auto;
 }
 
-.loader {
-    font-size: 10px;
-    margin: 50px auto;
-    text-indent: -9999em;
-    width: 11em;
-    height: 11em;
-    border-radius: 50%;
-    background: #ffffff;
-    background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-    background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-    background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-    background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-    background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-    position: relative;
-    -webkit-animation: load3 1.4s infinite linear;
-    animation: load3 1.4s infinite linear;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  .loader:before {
-    width: 50%;
-    height: 50%;
-    background: #ffffff;
-    border-radius: 100% 0 0 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-  }
-  .loader:after {
-    background: #01032D;
-    width: 75%;
-    height: 75%;
-    border-radius: 50%;
-    content: '';
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
+.preloader__img {
+    animation: load3 2s infinite;
+}
+
   @-webkit-keyframes load3 {
-    0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes load3 {
     0% {
       -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
@@ -678,11 +629,6 @@ button {
     transition: .3s;
     border-radius: 15px;
     width: 100%;
-}
-
-.project:hover {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(43px);
 }
 
 .project__inner {
@@ -1682,10 +1628,11 @@ button {
     width: 100%;
 }
 
-.project__about__btn, .project__about__btn__more {
+.project__about__btn, .project__about__btn__more, .project__about__btn__more__more {
     padding: 10px 25px;
     align-items: center;
     display: flex;
+    margin-top: 25px;
 
     text-decoration: none;
     font-weight: 600;
@@ -1698,7 +1645,7 @@ button {
     transition: .2s;
 }
 
-.project__about__btn__more {
+.project__about__btn__more, .project__about__btn__more__more {
     display: none;
 }
 
@@ -1714,7 +1661,33 @@ button {
     margin-left: 10px;
 }
 
-.project__about__btn:hover, .project__about__btn__more:hover {
+.project__about__btn__more__more {
+    margin-left: 20px;
+}
+
+.modal__inner__text__text__inner {
+    margin-bottom: 20px;
+}
+
+.modal__inner__text__text__left {
+    margin-right: 30px;
+}
+
+.modal__inner__text__text__left {
+    width: 50%;
+}
+
+.modal__inner__text__text__right {
+    width: 50%;
+}
+
+.modal__inner__left {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project__about__btn:hover, .project__about__btn__more:hover, .project__about__btn__more__more:hover {
     text-decoration: none;
     background: #153853;
 }
@@ -1815,12 +1788,15 @@ button {
 
 .project__about__text-more {
     display: none;
-    margin-bottom: 20px;
 }
 
 .swiper-slide.about:nth-child(2) {
     background-size: cover;
     background-position: center center;
+}
+
+.modal__inner__left.project {
+    width: 100%;
 }
 
 
@@ -1953,7 +1929,7 @@ button {
     width: 100%;
     height: 100vh;
 
-   background: #01032D;
+    background: #01032D;
 }
 
 .preloader__inner, .preloader__inner__img {
