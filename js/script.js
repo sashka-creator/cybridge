@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
   });
 
 $(document).ready(function() {
-    $('.contact__board__active__btn, .close, .contact__board__active__name').click(function(event) {
+    $('.contact__board__active__btn, .close, .contact__board__active__name, .project__about__btn__more__more').click(function(event) {
       $('.modal').toggleClass('visib');
     });
   });
@@ -112,6 +112,7 @@ $(document).ready(function() {
     $(".project__about__text-more").slideDown('slow');
     $(".project__about__text-more").css("display", "block");
     $(".project__about__btn__more").fadeIn('slow');
+    $(".project__about__btn__more__more").fadeIn('slow');
     $(".project__about__inner__text").css("margin-left", "745px");
     $(".project__about__inner__slider").css("right", "514px");
     $('.project__about__btn').slideUp('slow');
@@ -124,6 +125,7 @@ $(document).ready(function() {
   $(".project__about__rec").slideDown('slow');
   $(".project__about__text-more").slideUp('slow');
   $('.project__about__btn__more').slideUp('slow');
+  $('.project__about__btn__more__more').slideUp('slow');
   $(".project__about__btn__more").css("display", "none");
   $(".project__about__inner__text").css("margin-left", "0");
   $(".project__about__inner__slider").css("right", "0");
