@@ -171,10 +171,10 @@ window.addEventListener('scroll', (event) => {
     $(".cube__item__item-9").css("right", "232px");
     $(".cube__item__item-10").css("top", "136px");
     $(".cube__item__item-10").css("right", "229px");
-    $(".cube__item__item-12").css("top", "260px");
-    $(".cube__item__item-13").css("top", "340px");
-    $(".cube__item__item-14").css("top", "365px");
-    $(".cube__item__item-15").css("top", "394px");
+    $(".cube__item__item-12").css("top", "230px");
+    $(".cube__item__item-13").css("top", "323px");
+    $(".cube__item__item-14").css("top", "362px");
+    $(".cube__item__item-15").css("top", "404px");
   }
 
 
@@ -203,7 +203,7 @@ window.addEventListener('scroll', (event) => {
   if(scroll > 1200) {
     $(".cube__item__item-4").css("left", "178px");
     $(".cube__item__item-4").css("bottom", "97px");
-    $(".cube__item__item-9").css("top", "90px");
+    $(".cube__item__item-9").css("top", "77px");
     $(".cube__item__item-9").css("right", "229px");
   }
 })
