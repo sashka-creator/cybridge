@@ -503,27 +503,13 @@
                     </div>
                     <div class="contact__inputs">
                         <form action="sender.php" method="post">
-
-                            <div class="contact__inputs__1">
-                                <div class="contact__inputs__inner__1">
-                                    <label class="contact__name__label">Your name</label>
-                                    <input type="text" name="name" required class="contact__name">
-                                </div>
-                                <div class="contact__inputs__inner__1">
-                                    <label class="contact__name__label" type="email">Your e-mail</label>
-                                    <input type="text" name="email" required class="contact__name">
-                                </div>
-                            </div>
-                            <div>
-                                <div class="contact__inputs__inner__1 message">
-                                    <label class="contact__name__label ">Your message</label>
-                                    <input type="text" name="text" required class="contact__name">
-                                </div>
-                            </div>
-                            <div class="contact__inputs__inner__1 message">
-                                <button class="contact__btn" type="submit" value="Send Request">Send</button>
-                            </div>
-
+                            <input type="text" class="name" name="name" placeholder="Имя" required>
+                            <input type="text" name="surname" placeholder="Фамилия" required>
+                            <input type="text" class="phone" name="phone" placeholder="Телефон">
+                            <input type="email" name="email" placeholder="Email" required>
+                            <textarea name="text" id="" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                            <button type="button" class="send-form">Отправить форму</button>
+                            <div class="status"></div>
                         </form>
                     </div>
                 </div>

@@ -1,6 +1,9 @@
 jQuery(document).ready(function () {
-      
- jQuery('.contact__btn').click( function() {
+     
+  $(".phone").mask("+380 (99) 999-99-99"); 
+ 
+
+ jQuery('.info__section__link').click( function() {
    var form = jQuery(this).closest('form');
    
    if ( form.valid() ) {
@@ -27,6 +30,7 @@ jQuery(document).ready(function () {
 
 
 });
+
 
 
 $(window).on('load', function () {

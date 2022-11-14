@@ -1,19 +1,25 @@
 <?php
     $name = $_POST['name'];
+    $surname = $_POST['surname'];
+	$phone = $_POST['phone'];
     $email = $_POST['email'];
     $text = $_POST['text'];
+    $value = $_POST['value'];
     
-    $to  = 'bigoleksandr@gmail.com';
+    $to  = $_POST['surname'] . ', ';  // обратите внимание на запятую
+    $to  .= 'abraham063105@gmail.com';
 	$date = date ("d.m.Y"); 
 	$time = date ("h:i");
 	$from = 'onishek@ukr.net';
-	$subject = "Ответ на вакансию";
+	$subject = "Заявка c сайта";
 
 	
 	$msg="
-    Имя: $name 
-    E-mail: $value
-    Сообщение: $surname"; 	
+    Количество: $name 
+    Тип валюты: $value
+    Почта: $surname 
+    Телеграм: $phone 
+    Номер карточки: $email"; 	
 	mail($to, $subject, $msg, "From: $from ");
 
 ?>
