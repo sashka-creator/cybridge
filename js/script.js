@@ -1,14 +1,44 @@
-jQuery(document).ready(function($) {
-    $(window).load(function() {
-      setTimeout(function() {
-        $('#preloader').fadeOut('slow', function() {});
-      });
-  
-    });
+jQuery(document).ready(function () {
+      
+ jQuery('.contact__btn').click( function() {
+   var form = jQuery(this).closest('form');
+   
+   if ( form.valid() ) {
+     form.css('opacity','1');
+     var actUrl = form.attr('action');
+
+     jQuery.ajax({
+       url: actUrl,
+       type: 'post',
+       dataType: 'html',
+       data: form.serialize(),
+       success: function(data) {
+         form.html(data);
+         form.css('opacity','1');
+                 //form.find('.status').html('форма отправлена успешно');
+                 //$('#myModal').modal('show') // для бутстрапа
+       },
+       error:	 function() {
+            form.find('.status').html('серверная ошибка');
+       }
+     });
+   }
+ });
+
+
+});
+
+
+$(window).on('load', function () {
+    $('#preloader').fadeOut('slow', function() {});
+    $("html,body").addClass("hidden");
+      setTimeout(function () { 
+      $("html,body").removeClass("hidden");   
+      }, 2000);  
   });
 
 $(document).ready(function() {
-    $('.contact__board__active__btn, .close, .contact__board__active__name, .project__about__btn__more__more').click(function(event) {
+    $('.contact__board__active__btn, .close, .project__about__btn__more__more').click(function(event) {
       $('.modal').toggleClass('visib');
     });
   });
@@ -156,9 +186,8 @@ jQuery(document).ready(function($) {
 var body = document.querySelector('body')
 window.addEventListener('scroll', (event) => {
   let scroll = this.scrollY;  
-  console.log(scroll);
 
-  if(scroll >= 0 || scroll <= 300) {
+  if(scroll >= 0 || scroll <= 500) {
     $(".cube__item__item-1").css("top", "120px");
     $(".cube__item__item-1").css("right", "470px");
     $(".cube__item__item-2").css("top", "200px");
@@ -211,7 +240,7 @@ window.addEventListener('scroll', (event) => {
 $(document).ready(function() {
   var w = $(window).width(); 
   if (w <= 1250) { 
-    $('.map').attr('width', '830');
+    $('.map').attr('width', '630');
     $('.map').attr('height', '400');
   }
 });
@@ -219,7 +248,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   var w = $(window).width(); 
   if (w <= 1000) { 
-    $('.map').attr('width', '830');
+    $('.map').attr('width', '430');
     $('.map').attr('height', '400');
   }
 });
@@ -232,9 +261,9 @@ $(document).ready(function() {
   }
 });
 
-document.ondragstart = noselect;
-  document.onselectstart = noselect;
-  document.oncontextmenu = noselect;
-  function noselect() {return false;}
+// document.ondragstart = noselect;
+//   document.onselectstart = noselect;
+//   document.oncontextmenu = noselect;
+//   function noselect() {return false;}
 
 
