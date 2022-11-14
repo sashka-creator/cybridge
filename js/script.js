@@ -1,7 +1,9 @@
 jQuery(document).ready(function () {
      
+  $(".phone").mask("+380 (99) 999-99-99"); 
+ 
 
- jQuery('.contact__btn').click( function() {
+ jQuery('.info__section__link').click( function() {
    var form = jQuery(this).closest('form');
    
    if ( form.valid() ) {
@@ -29,242 +31,311 @@ jQuery(document).ready(function () {
 
 });
 
+let time = 1800;
+const countDownEl = document.getElementById('done__timer')
 
-$(window).on('load', function () {
-    $('#preloader').fadeOut('slow', function() {});
-    $("html,body").addClass("hidden");
-      setTimeout(function () { 
-      $("html,body").removeClass("hidden");   
-      }, 2000);  
+setInterval(updateCountdown, 1000);
+
+function  updateCountdown() {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+  seconds = seconds < 10 ? '0' + seconds:seconds;
+  countDownEl.innerHTML = `${minutes}:${seconds}`;
+  time--;
+
+}
+
+
+$( "#item-1" ).click(function() {
+    $('.exchange__inner__item-1').toggleClass('active');
+    $('.exchange__inner__item-2').removeClass('active');
+    $('.exchange__inner__item-3').removeClass('active');
+    $('.exchange__inner__item-4').removeClass('active');
+    $('.exchange__inner__item-5').removeClass('active');
+    $('.exchange__inner__item-6').removeClass('active');
+    $('.exchange__inner__item-7').removeClass('active');
+    $('.exchange__inner__item-8').removeClass('active');
+    $('.exchange__inner__item-9').removeClass('active');
+    $('.exchange__inner__right__bottom__text-1').html('Bitcoin BTC');
+    $(".exchange__inner__right__item-3").css("display", "none");
+    $(".exchange__inner__right__item-4").css("display", "none");
+    $(".exchange__inner__right__item-5").css("display", "none");
+    $(".exchange__inner__right__item-1").css("display", "none");
+    $(".exchange__inner__right__item-2").css("display", "none");
   });
 
-$(document).ready(function() {
-    $('.contact__board__active__btn, .close, .project__about__btn__more__more').click(function(event) {
-      $('.modal').toggleClass('visib');
+  $( "#item-2" ).click(function() {
+    $('.exchange__inner__item-1').removeClass('active');
+    $('.exchange__inner__item-2').toggleClass('active');
+    $('.exchange__inner__item-3').removeClass('active');
+    $('.exchange__inner__item-4').removeClass('active');
+    $('.exchange__inner__item-5').removeClass('active');
+    $('.exchange__inner__item-6').removeClass('active');
+    $('.exchange__inner__item-7').removeClass('active');
+    $('.exchange__inner__item-8').removeClass('active');
+    $('.exchange__inner__item-9').removeClass('active');
+    $('.exchange__inner__right__bottom__text-1').html('Ethereun ETH');
+    $(".exchange__inner__right__item-3").css("display", "none");
+    $(".exchange__inner__right__item-4").css("display", "none");
+    $(".exchange__inner__right__item-5").css("display", "none");
+    $(".exchange__inner__right__item-1").css("display", "none");
+    $(".exchange__inner__right__item-2").css("display", "none");
+  });
+  
+  $( "#item-3" ).click(function() {
+    $('.exchange__inner__item-1').removeClass('active');
+    $('.exchange__inner__item-2').removeClass('active');
+    $('.exchange__inner__item-3').toggleClass('active');
+    $('.exchange__inner__item-4').removeClass('active');
+    $('.exchange__inner__item-5').removeClass('active');
+    $('.exchange__inner__item-6').removeClass('active');
+    $('.exchange__inner__item-7').removeClass('active');
+    $('.exchange__inner__item-8').removeClass('active');
+    $('.exchange__inner__item-9').removeClass('active');
+    $('.exchange__inner__right__bottom__text-1').html('USDT TRC20');
+    $(".exchange__inner__right__item-3").css("display", "block");
+    $(".exchange__inner__right__item-4").css("display", "block");
+    $(".exchange__inner__right__item-5").css("display", "block");
+    $(".exchange__inner__right__item-1").css("display", "block");
+    $(".exchange__inner__right__item-2").css("display", "block");
+  });
+
+  $( "#item-4" ).click(function() {
+    $('.exchange__inner__item-1').removeClass('active');
+    $('.exchange__inner__item-2').removeClass('active');
+    $('.exchange__inner__item-3').removeClass('active');
+    $('.exchange__inner__item-4').toggleClass('active');
+    $('.exchange__inner__item-5').removeClass('active');
+    $('.exchange__inner__item-6').removeClass('active');
+    $('.exchange__inner__item-7').removeClass('active');
+    $('.exchange__inner__item-8').removeClass('active');
+    $('.exchange__inner__item-9').removeClass('active');
+  });
+
+  $( "#item-5" ).click(function() {
+    $('.exchange__inner__item-1').removeClass('active');
+    $('.exchange__inner__item-2').removeClass('active');
+    $('.exchange__inner__item-3').removeClass('active');
+    $('.exchange__inner__item-4').removeClass('active');
+    $('.exchange__inner__item-5').toggleClass('active');
+    $('.exchange__inner__item-6').removeClass('active');
+    $('.exchange__inner__item-7').removeClass('active');
+    $('.exchange__inner__item-8').removeClass('active');
+    $('.exchange__inner__item-9').removeClass('active');
+  });
+
+
+  $( "#item-6" ).click(function() {
+    $('.exchange__inner__right__item-1').toggleClass('active');
+    $('.exchange__inner__right__item-2').removeClass('active');
+    $('.exchange__inner__right__item-3').removeClass('active');
+    $('.exchange__inner__right__item-4').removeClass('active');
+    $('.exchange__inner__right__item-5').removeClass('active');
+    $('.exchange__inner__right__item-6').removeClass('active');
+    $('.exchange__inner__right__item-7').removeClass('active');
+    $('.exchange__inner__right__item-8').removeClass('active');
+    $('.exchange__inner__right__item-9').removeClass('active');
+    $('.exchange__inner__right__bottom__text-2').html('Privat24 UAH');
+  });
+
+  $( "#item-7" ).click(function() {
+    $('.exchange__inner__right__item-1').removeClass('active');
+    $('.exchange__inner__right__item-2').toggleClass('active');
+    $('.exchange__inner__right__item-3').removeClass('active');
+    $('.exchange__inner__right__item-4').removeClass('active');
+    $('.exchange__inner__right__item-5').removeClass('active');
+    $('.exchange__inner__right__item-6').removeClass('active');
+    $('.exchange__inner__right__item-7').removeClass('active');
+    $('.exchange__inner__right__item-8').removeClass('active');
+    $('.exchange__inner__right__item-9').removeClass('active');
+    $('.exchange__inner__right__bottom__text-2').html('Monobank UAH');
+  });
+
+  $( "#item-8" ).click(function() {
+    $('.exchange__inner__right__item-1').removeClass('active');
+    $('.exchange__inner__right__item-2').removeClass('active');
+    $('.exchange__inner__right__item-3').toggleClass('active');
+    $('.exchange__inner__right__item-4').removeClass('active');
+    $('.exchange__inner__right__item-5').removeClass('active');
+    $('.exchange__inner__right__item-6').removeClass('active');
+    $('.exchange__inner__right__item-7').removeClass('active');
+    $('.exchange__inner__right__item-8').removeClass('active');
+    $('.exchange__inner__right__item-9').removeClass('active');
+    $('.exchange__inner__right__bottom__text-2').html('Tinkoff RUB');
+  });
+
+  $( "#item-9" ).click(function() {
+    $('.exchange__inner__right__item-1').removeClass('active');
+    $('.exchange__inner__right__item-2').removeClass('active');
+    $('.exchange__inner__right__item-3').removeClass('active');
+    $('.exchange__inner__right__item-4').toggleClass('active');
+    $('.exchange__inner__right__item-5').removeClass('active');
+    $('.exchange__inner__right__item-6').removeClass('active');
+    $('.exchange__inner__right__item-7').removeClass('active');
+    $('.exchange__inner__right__item-8').removeClass('active');
+    $('.exchange__inner__right__item-9').removeClass('active');
+    $('.exchange__inner__right__bottom__text-2').html('Sbernank RUB');
+  });
+
+  $( "#item-10" ).click(function() {
+    $('.exchange__inner__right__item-1').removeClass('active');
+    $('.exchange__inner__right__item-2').removeClass('active');
+    $('.exchange__inner__right__item-3').removeClass('active');
+    $('.exchange__inner__right__item-4').removeClass('active');
+    $('.exchange__inner__right__item-5').toggleClass('active');
+    $('.exchange__inner__right__item-6').removeClass('active');
+    $('.exchange__inner__right__item-7').removeClass('active');
+    $('.exchange__inner__right__item-8').removeClass('active');
+    $('.exchange__inner__right__item-9').removeClass('active');
+    $('.exchange__inner__right__bottom__text-2').html('Alfabank RUB');
+  });
+
+  $( "#item-11" ).click(function() {
+    $('.exchange__inner__right__item-1').removeClass('active');
+    $('.exchange__inner__right__item-2').removeClass('active');
+    $('.exchange__inner__right__item-3').removeClass('active');
+    $('.exchange__inner__right__item-4').removeClass('active');
+    $('.exchange__inner__right__item-5').removeClass('active');
+    $('.exchange__inner__right__item-6').toggleClass('active');
+    $('.exchange__inner__right__item-7').removeClass('active');
+    $('.exchange__inner__right__item-8').removeClass('active');
+    $('.exchange__inner__right__item-9').removeClass('active');
+    $('.exchange__inner__right__bottom__text-2').html('V/M RUB');
+  });
+
+  $( "#item-12" ).click(function() {
+    $('.exchange__inner__right__item-1').removeClass('active');
+    $('.exchange__inner__right__item-2').removeClass('active');
+    $('.exchange__inner__right__item-3').removeClass('active');
+    $('.exchange__inner__right__item-4').removeClass('active');
+    $('.exchange__inner__right__item-5').removeClass('active');
+    $('.exchange__inner__right__item-6').removeClass('active');
+    $('.exchange__inner__right__item-7').toggleClass('active');
+    $('.exchange__inner__right__item-8').removeClass('active');
+    $('.exchange__inner__right__item-9').removeClass('active');
+    $('.exchange__inner__right__bottom__text-2').html('V/M UAH');
+  });
+
+  $( "#item-13" ).click(function() {
+    $('.exchange__inner__right__item-1').removeClass('active');
+    $('.exchange__inner__right__item-2').removeClass('active');
+    $('.exchange__inner__right__item-3').removeClass('active');
+    $('.exchange__inner__right__item-4').removeClass('active');
+    $('.exchange__inner__right__item-5').removeClass('active');
+    $('.exchange__inner__right__item-6').removeClass('active');
+    $('.exchange__inner__right__item-7').removeClass('active');
+    $('.exchange__inner__right__item-8').toggleClass('active');
+    $('.exchange__inner__right__item-9').removeClass('active');
+    $('.exchange__inner__right__bottom__text-2').html('V/M USD');
+  });
+
+  $( "#item-14" ).click(function() {
+    $('.exchange__inner__right__item-1').removeClass('active');
+    $('.exchange__inner__right__item-2').removeClass('active');
+    $('.exchange__inner__right__item-3').removeClass('active');
+    $('.exchange__inner__right__item-4').removeClass('active');
+    $('.exchange__inner__right__item-5').removeClass('active');
+    $('.exchange__inner__right__item-6').removeClass('active');
+    $('.exchange__inner__right__item-7').removeClass('active');
+    $('.exchange__inner__right__item-8').removeClass('active');
+    $('.exchange__inner__right__item-9').toggleClass('active');
+    $('.exchange__inner__right__bottom__text-2').html('N26 EUR');
+  });
+
+  function moneyConverterA(valNum) {
+    document.getElementById('result-a').innerHTML=valNum*65.7 + " RUB";
+  } 
+
+  function moneyConverterB(valNum) {
+    document.getElementById('result-b').innerHTML=valNum*65.7 + " RUB";
+} 
+
+function moneyConverterC(valNum) {
+  document.getElementById('result-c').innerHTML=valNum*65.7 + " RUB";
+} 
+
+function moneyConverterD(valNum) {
+  document.getElementById('result-d').innerHTML=valNum*41.5 + " UAH";
+} 
+
+function moneyConverterE(valNum) {
+  document.getElementById('result-e').innerHTML=valNum*41.5 + " UAH";
+} 
+
+function moneyConverterF(valNum) {
+  document.getElementById('result-f').innerHTML=valNum*65.7 + " RUB";
+} 
+
+function moneyConverterG(valNum) {
+  document.getElementById('result-g').innerHTML=valNum*41.5 + " UAH";
+} 
+
+function moneyConverterH(valNum) {
+  document.getElementById('result-h').innerHTML=valNum*1 + " USD";
+} 
+
+function moneyConverterI(valNum) {
+  document.getElementById('result-i').innerHTML=valNum*1.5 + " EUR";
+} 
+
+
+  function copy(copyId){
+    var $inp=$("<input>");
+    $("body").append($inp);
+    $inp.val($(""+copyId).text()).select();
+    document.execCommand("copy");
+    $inp.remove();
+  }
+  $(document).ready(function(){
+    $("#copyButton1").click(function(){
+      copy('#text1');
     });
   });
 
-$(document).ready(function() {
-    $('.burger, .modal__close').click(function(event) {
-      $('.burger__modal').toggleClass('visib');
-    });
-  });  
+  $(".copy, .done__title").click(function(){
+    let temp = $("<input>");
+    $("body").append(temp);
+    temp.val($(".done__title").text()).select();
+    document.execCommand("copy");
+    temp.remove();
+  })
 
-  var swiper = new Swiper('.slider .swiper-container', {
-    
-    
-    slidesPerView: 1,
-    spaceBetween: 20,
+// $(".info__section__btn").click(function(){
+//   $(".info__section__4").slideDown('slow');
+//   $("#rec").slideDown('slow');
+//   $(".info__section__btn").css("display", "none");
+//   $(".info__section__link").css("margin-top", "0");
 
-    autoplay: {
-        delay: 3000,
-    },
-
-    speed: 1000,
-  });
-
-  var swiper = new Swiper('.projects__slider__inner .swiper-container', {
-
-    slidesPerView: 1,
-    spaceBetween: 20,
-
-    pagination: {
-
-      el: '.swiper-pagination',
-      clickable: true,
-
-    },
+// });
 
 
-    autoplay: {
-        delay: 3000,
-    },
-
-    speed: 1000,
-  });
+  var btc = document.querySelector('.exchange__inner__item-1')
+  var privat = document.querySelector('.exchange__inner__right__item-1')
 
   
-  var swiper = new Swiper('.project__slider .swiper-container', {
-    
-    
-    slidesPerView: 3,
-    spaceBetween: 40,
-
-    autoplay: {
-        delay: 3000,
-    },
-
-    speed: 1000,
-  });
-    
-  var swiper = new Swiper('.team__slider__inner .swiper-container', {
-    
-    
-    slidesPerView: 2,
-    spaceBetween: 20,
-
-    autoplay: {
-        delay: 3000,
-    },
-
-    speed: 1000,
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints: {
-
-      10: {
-        slidesPerView: 1,
-      },
-
-      460: {
-        slidesPerView: 1,
-      },
-
-      770: {
-        slidesPerView: 2,
-      },
-
-      1000: {
-        slidesPerView: 2,
-        
-      },
-  },
-
+  $('.exchange__inner__right__bottom__link').click(function(){
+    if($(".exchange__inner__right__item-3").hasClass('active') & $(".exchange__inner__item-3").hasClass('active')) {
+        $('.exchange__inner__right__bottom__link').attr('href', 'exchange-usdt-tinkof.html');
+      } else if ($(".exchange__inner__right__item-4").hasClass('active') & $(".exchange__inner__item-3").hasClass('active')) {
+        $('.exchange__inner__right__bottom__link').attr('href', 'exchange-usdt-sber.html');
+      } else if ($(".exchange__inner__right__item-5").hasClass('active') & $(".exchange__inner__item-3").hasClass('active')) {
+        $('.exchange__inner__right__bottom__link').attr('href', 'exchange-usdt-alfa.html');
+      } else if ($(".exchange__inner__right__item-1").hasClass('active') & $(".exchange__inner__item-3").hasClass('active')) {
+        $('.exchange__inner__right__bottom__link').attr('href', 'exchange-usdt-privat.html');
+      } else if ($(".exchange__inner__right__item-2").hasClass('active') & $(".exchange__inner__item-3").hasClass('active')) {
+        $('.exchange__inner__right__bottom__link').attr('href', 'exchange-usdt-mono.html');
+      } else if ($(".exchange__inner__right__item-6").hasClass('active') & $(".exchange__inner__item-3").hasClass('active')) {
+        $('.exchange__inner__right__bottom__link').attr('href', 'exchange-usdt-vm-rub.html');
+      } else if ($(".exchange__inner__right__item-7").hasClass('active') & $(".exchange__inner__item-3").hasClass('active')) {
+        $('.exchange__inner__right__bottom__link').attr('href', 'exchange-usdt-vm-uah.html');
+      } else if ($(".exchange__inner__right__item-8").hasClass('active') & $(".exchange__inner__item-3").hasClass('active')) {
+        $('.exchange__inner__right__bottom__link').attr('href', 'exchange-usdt-vm-usd.html');
+      } else if ($(".exchange__inner__right__item-9").hasClass('active') & $(".exchange__inner__item-3").hasClass('active')) {
+        $('.exchange__inner__right__bottom__link').attr('href', 'exchange-usdt-n26.html');
+      } else {
+        alert('Please, selecty what you give or what you get');
+      }
   });
 
-  $(".project__about__btn").click(function(){
-    $(".project__about__text").slideUp('slow');
-    $(".project__about__item").slideUp('slow');
-    $(".project__about__rec").slideUp('slow');
-    $(".project__about__text-more").slideDown('slow');
-    $(".project__about__text-more").css("display", "block");
-    $(".project__about__btn__more").fadeIn('slow');
-    $(".project__about__btn__more__more").fadeIn('slow');
-    $(".project__about__inner__text").css("margin-left", "745px");
-    $(".project__about__inner__slider").css("right", "514px");
-    $('.project__about__btn').slideUp('slow');
-    $(".project__about__btn").css("display", "none");
- });
 
- $(".project__about__btn__more").click(function(){
-  $(".project__about__text").slideDown('slow');
-  $(".project__about__item").slideDown('slow');
-  $(".project__about__rec").slideDown('slow');
-  $(".project__about__text-more").slideUp('slow');
-  $('.project__about__btn__more').slideUp('slow');
-  $('.project__about__btn__more__more').slideUp('slow');
-  $(".project__about__btn__more").css("display", "none");
-  $(".project__about__inner__text").css("margin-left", "0");
-  $(".project__about__inner__slider").css("right", "0");
-  $('.project__about__btn').slideDown('slow');
-  $(".project__about__btn").css("display", "flex");
-});
-
-
-$("#blockchain").click(function(){
-  $('.blockchain').addClass('active');
-  $('.bigdata').removeClass('active');
-});
-
-$("#bigdata").click(function(){
-  $('.blockchain').removeClass('active');
-  $('.bigdata').addClass('active');
-});
-
-jQuery(document).ready(function($) {
-  $(window).load(function() {
-    setTimeout(function() {
-      $('.portfolio__rec').css("opacity", "1");
-    }, 500);
-
-  });
-});
-
-var body = document.querySelector('body')
-window.addEventListener('scroll', (event) => {
-  let scroll = this.scrollY;  
-
-  if(scroll >= 0 || scroll <= 500) {
-    $(".cube__item__item-1").css("top", "120px");
-    $(".cube__item__item-1").css("right", "470px");
-    $(".cube__item__item-2").css("top", "200px");
-    $(".cube__item__item-2").css("right", "20px");
-    $(".cube__item__item-3").css("top", "360px");
-    $(".cube__item__item-3").css("right", "30px");
-    $(".cube__item__item-4").css("left", "100px");
-    $(".cube__item__item-4").css("bottom", "10px");
-    $(".cube__item__item-9").css("top", "50px");
-    $(".cube__item__item-9").css("right", "232px");
-    $(".cube__item__item-10").css("top", "136px");
-    $(".cube__item__item-10").css("right", "229px");
-    $(".cube__item__item-12").css("top", "230px");
-    $(".cube__item__item-13").css("top", "323px");
-    $(".cube__item__item-14").css("top", "362px");
-    $(".cube__item__item-15").css("top", "404px");
-  }
-
-
-  if(scroll > 300) {
-    $(".cube__item__item-1").css("top", "185px");
-    $(".cube__item__item-1").css("right", "377px");
-  }
-
-  if(scroll > 600) {
-    $(".cube__item__item-2").css("top", "253px");
-    $(".cube__item__item-2").css("right", "80px");
-    $(".cube__item__item-10").css("top", "186px");
-    $(".cube__item__item-10").css("right", "229px");
-  }
-
-  if(scroll > 900) {
-    $(".cube__item__item-3").css("top", "276px");
-    $(".cube__item__item-3").css("right", "229px");
-    $(".cube__item__item-3").css("right", "229px");
-    $(".cube__item__item-12").css("top", "270px");
-    $(".cube__item__item-13").css("top", "338px");
-    $(".cube__item__item-14").css("top", "353px");
-    $(".cube__item__item-15").css("top", "372px");
-  }
-
-  if(scroll > 1200) {
-    $(".cube__item__item-4").css("left", "178px");
-    $(".cube__item__item-4").css("bottom", "97px");
-    $(".cube__item__item-9").css("top", "77px");
-    $(".cube__item__item-9").css("right", "229px");
-  }
-})
-
-$(document).ready(function() {
-  var w = $(window).width(); 
-  if (w <= 1250) { 
-    $('.map').attr('width', '630');
-    $('.map').attr('height', '400');
-  }
-});
-
-$(document).ready(function() {
-  var w = $(window).width(); 
-  if (w <= 1000) { 
-    $('.map').attr('width', '430');
-    $('.map').attr('height', '400');
-  }
-});
-
-$(document).ready(function() {
-  var w = $(window).width(); 
-  if (w <= 770) { 
-    $('.map').attr('width', '440');
-    $('.map').attr('height', '300');
-  }
-});
-
-// document.ondragstart = noselect;
-//   document.onselectstart = noselect;
-//   document.oncontextmenu = noselect;
-//   function noselect() {return false;}
-
-
+  
