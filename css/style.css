@@ -90,7 +90,7 @@ button {
     animation: load3 2s infinite;
 }
 
-  @-webkit-keyframes load3 {
+  @keyframes load3 {
     0% {
       -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
@@ -225,7 +225,7 @@ button {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .intro__logo {
@@ -234,14 +234,19 @@ button {
 }
 
 .intro__logo__wrapper {
-    margin-bottom: 110px;
+    margin-bottom: 150px;
 }
 
 .intro__arrows__con {
     position: absolute;
 
+    top: 280px;
     right: 0;
     left: 0;
+}
+
+.intro__arrows__con__wrapper {
+    position: relative;
 }
 
 .intro__arrows {
@@ -264,11 +269,49 @@ button {
     margin-bottom: 180px;
 }
 
+.scope__main {
+    width: 100%;
+    margin-bottom: -60px;
+    background: rgba(43, 43, 43, 0.3);
+    backdrop-filter: blur(43px);
+    -webkit-backdrop-filter: blur(220px);
+
+    border-radius: 15px;
+
+    transition: .3s;
+}
+
+.intro__logo {
+    max-width: 600px;
+}
+
 .scope__inner {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.scope__main__title {
+    padding-top: 50px;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 200%;
+    text-align: center;
+}
+
+.scope__main__text {
+    padding-bottom: 50px;
+    max-width: 630px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 90px;
+
+    text-align: center;
+    width: fit-content;
+}
+
 
 .scope__item {
     width: 50%;
@@ -290,7 +333,7 @@ button {
     margin-left: 15px;
 }
 
-.scope__item:hover {
+.scope__item:hover, .scope__main:hover {
     background: rgba(43, 43, 43, 0.148);
 }
 
@@ -420,7 +463,7 @@ button {
     background: rgba(43, 43, 43, 0.3);
     backdrop-filter: blur(43px);
     -webkit-backdrop-filter: blur(220px);
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 
 .footer__inner {
@@ -435,7 +478,7 @@ button {
 }
 
 .copyright {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .footer__item__item {
@@ -509,7 +552,7 @@ button {
 }
 
 .menu__inner {
-    margin-top: 130px;
+    margin-top: 110px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -629,6 +672,11 @@ button {
     transition: .3s;
     border-radius: 15px;
     width: 100%;
+    transition: .3s;
+}
+
+.project.projects:hover {
+    background: #0E234A;
 }
 
 .project__inner {
@@ -749,9 +797,31 @@ button {
     opacity: 0;
 }
 
+.project__image__inner {
+    max-height: 450px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.project__inner__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.project__image__wrap {
+    max-width: 700px;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
 .project__inner__img.hover1 {
     position: absolute;
     margin-top: 0;
+}
+
+.project__roadmap  {
+    display: none;
 }
 
 .project__inner__img.hover1 {
@@ -770,7 +840,7 @@ button {
 
 .project__image {
     margin-top: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
 }
 
 .filter.title {
@@ -783,6 +853,12 @@ button {
 
 .project__image__inner__img {
     border-radius: 15px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.seo__text {
+    display: none;
 }
 
 /* Roadmap */
@@ -881,6 +957,9 @@ button {
 
 .project__about__inner__slider__item {
     border-radius: 15px;
+    object-fit: cover;
+    object-position: center center;
+    
 }
 
 .project__about__text {
@@ -1023,15 +1102,9 @@ button {
     display: flex;
     align-content: inherit;
     width: 50%;
-    padding-top: 260px;
+    padding-top: 0px;
 
-    border-radius: 15px 0 0 15px;
-    background: url(../img/project-dop-prev.png);
-}
-
-.project__dop__inner__item:last-child {
-    border-radius: 0 15px 15px 0;
-    background: url(../img/project-dop-next.png);
+    border-radius: 15px;
 }
 
 .project__dop__link {
@@ -1039,7 +1112,7 @@ button {
     align-items: center;
     padding: 8px 30px;
 
-    border-radius: 0 15px 0 15px;
+    border-radius: 15px;
     background: rgba(14, 44, 65, 0.25);
     backdrop-filter: blur(15px);
 
@@ -1055,7 +1128,7 @@ button {
 .project__dop__link.next {
     margin-left: auto;
 
-    border-radius: 15px 0 15px 0;
+    border-radius: 15px;
 }
 
 .project__dop__arrow {
@@ -1127,7 +1200,7 @@ button {
     margin-top: 50px;
 }
 
-.team__item:nth-child(4), .team__item:nth-child(7) {
+.team__item:nth-child(4), .team__item:nth-child(7), .team__item:nth-child(10) {
     margin-left: 0;
 }
 
@@ -1221,6 +1294,7 @@ button {
 .contact__board__active__btn {
     text-decoration: underline;
     cursor: pointer;
+    color: #ffffff;
 }
 
 .contact__board {
@@ -1368,6 +1442,11 @@ button {
     cursor: pointer;
 }
 
+.close.ico {
+    position: absolute;
+    right: 60px;
+}
+
 .modal__inner {
     position: absolute;
     width: 100%;
@@ -1400,6 +1479,7 @@ button {
 
 .burger__modal.visib {
     top: 0;
+    transition: .3s;
     visibility: visible;
 }
 
@@ -1516,7 +1596,7 @@ button {
 }
 
 .cube__inner {
-    height: 2000px;
+    height: 2240px;
 }
 
 
@@ -1548,6 +1628,29 @@ button {
     color: #FFFFFF;
 }
 
+.partners__img {
+    filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+
+transition: .3s;
+}
+
+.partners__img:hover {
+    filter: grayscale(0%);
+-webkit-filter: grayscale(0%);
+-moz-filter: grayscale(0%);
+-o-filter: grayscale(0%);
+-ms-filter: grayscale(0%);
+}
+
+.about__title.partners {
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+
 .about__title:nth-child(2) {
     margin-bottom: 40px;
 }
@@ -1561,7 +1664,7 @@ button {
 }
 
 .about__text {
-    width: 350px;
+    width: 440px;
 
     font-weight: 500;
     font-size: 16px;
@@ -1592,6 +1695,10 @@ button {
 
 .about__block:nth-child(3), .about__block:nth-child(4) {
     margin-top: 250px;
+}
+
+.slider__text {
+    padding-top: 50px;
 }
 
 .about__link {
@@ -1677,6 +1784,10 @@ button {
     width: 50%;
 }
 
+.modal__inner__text__text__left.ico {
+    width: 100%;
+}
+
 .modal__inner__text__text__right {
     width: 50%;
 }
@@ -1689,7 +1800,7 @@ button {
 
 .project__about__btn:hover, .project__about__btn__more:hover, .project__about__btn__more__more:hover {
     text-decoration: none;
-    background: #153853;
+    background: #152e53;
 }
 
 .project__about__item:first-child {
@@ -1737,6 +1848,10 @@ button {
     height: 460px;
 }
 
+.projects__seo {
+    display: none;
+}
+
 .projects__slider {
     padding-top: 50px;
     padding-bottom: 40px;
@@ -1748,15 +1863,34 @@ button {
 
 .swiper-slide.about {
     border-radius: 15px;
-    background: url(../img/slide-1.png);
+    background: url(../img/block-3.jpg);
+    background-position: center center;
+    background-size: cover;
+
 }
 
 .swiper-slide.about:nth-child(2) {
-    background: url(../img/slide-2.png);
+    background: url(../img/ico-ido-1.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 
 .swiper-slide.about:nth-child(3) {
-    background: url(../img/slide-3.png);
+    background: url(../img/daps-2.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.swiper-slide.about:nth-child(4) {
+    background: url(../img/nft-2.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.swiper-slide.about:nth-child(5) {
+    background: url(../img/wallets-2.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 
 .slide__link {
@@ -1856,7 +1990,7 @@ button {
 /* Google map */
 
 .google__map__inner {
-    height: 490px;
+    height: 480px;
 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(43px);
@@ -2016,6 +2150,49 @@ button {
 
 }
 
+.project__about__btn__more__more.adaptive {
+    display: none;
+}
+
+.link__arrow {
+    margin-left: 10px;
+}
+
+.footer__item__link.btn {
+    margin-top: 35px;
+}
+
+.phone, .phone.value {
+    display: none;
+}
+
+.main__map__phone {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.partners__item {
+    max-width: 10%;
+}
+
+.partners__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lang {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.lang__item {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 @media (max-width: 1250px) {
 
     .project__inner__img.hover1 {
@@ -2082,7 +2259,7 @@ button {
     }
 
     .footer__inner {
-        padding-bottom: 70px;   
+        padding-bottom: 20px;   
     }
 
     .nav__item.more:first-child {
@@ -2090,7 +2267,7 @@ button {
     }
 
     .nav__item.more, .nav__item.logo {
-        margin-left: 102px;
+        margin-left: 91px;
     }
 
     .project__item__text__text {
@@ -2112,7 +2289,7 @@ button {
     }
 
     .project__image {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
     }
 
     .project__roadmap {
@@ -2168,7 +2345,7 @@ button {
 
     .footer__inner {
         padding-top: 60px;
-        padding-bottom: 70px;
+        padding-bottom: 20px;
     }
     
     .project__about__inner__text {
@@ -2307,6 +2484,10 @@ button {
         padding-right: 30px;
     }
 
+    .modal__inner__inner.project {
+        display: block;
+    }
+
     .modal__inner__adaptive {
         display: block;
     }
@@ -2345,11 +2526,28 @@ button {
     }
 
     .google__map__inner {
-        height: 400px;
+        height: 390px;
     }
 
     .project__link:hover .project__inner__img.prev1 {
         opacity: 1;
+    }
+
+    .project__about__inner {
+        display: block;
+
+    }
+
+    .project__about__inner__second, .project__about__inner__text {
+        width: 100%;
+    }
+
+    .project__image__inner__img {
+        height: auto;
+    }
+
+    .project__about__text {
+        margin-bottom: 30px;
     }
 
 }
@@ -2360,8 +2558,13 @@ button {
         max-width: 728px;
     }
 
+    .about__text {
+        width: 330px;
+    }
+
     .nav__item {
-        margin-left: 100px;
+        margin-left: 90px;
+        text-align-last: left;
 
         font-size: 15px;
     }
@@ -2455,6 +2658,10 @@ button {
         padding-bottom: 30px;
     }
 
+    .scope {
+        margin-top: 250px;
+    }
+
     .footer.main {
         margin-top: 100px;
     }
@@ -2540,7 +2747,7 @@ button {
     }
 
     .project__about__inner__text {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
 
     .project__about__text {
@@ -2695,8 +2902,27 @@ button {
     }
 
     .main__map__inner__right  {
-        display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        margin-left: 30px;
+    }
+
+    .main__map__title {
+        text-align: center;
+    }
+
+    .main__map__address {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main__map__phone {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 
     .main__map__rec {
@@ -2715,9 +2941,6 @@ button {
         padding-top: 60px;
     }
 
-    .main__map__inner__right__item {
-        padding-right: 70px;
-    }
 
     .main__map {
         margin-bottom: 100px;
@@ -2748,7 +2971,12 @@ button {
     }
 
     .intro__inner {
-        padding-top: 200px;
+        padding-top: 180px;
+    }
+
+    .about__advantage__img {
+        max-width: 80px;
+        max-height: 35px;
     }
 
 }
@@ -2759,6 +2987,18 @@ button {
         background-color: #011335;
     }
 
+    .partners__item {
+        max-width: 25%;
+    }
+
+    .lang {
+        display: none;
+    }
+
+    .slider__text {
+        font-size: 15px;
+    }
+
     .container {
         max-width: 440px;
         padding-left: 20px;
@@ -2767,8 +3007,26 @@ button {
     
 
     .intro__logo {
-        top: 55%;
-        max-width: 400px;
+        margin-top: -20px;
+        max-width: 340px;
+    }
+
+    .scope__main__title {
+        padding-top: 30px;
+    }
+
+    .scope__main__text {
+        padding-bottom: 30px;
+    }
+
+    .scope__main__title {
+        font-size: 16px;
+    }
+
+    .scope__main__text {
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .nav {
@@ -2782,7 +3040,9 @@ button {
     .intro {
         margin-top: -275px;
         height: 680px;
+        max-width: 770px;
         width: 100%;
+        background-size: auto 100%;
         background: url(../img/adaptive-bk.png);
         background-position: center center;
     }
@@ -2923,7 +3183,7 @@ button {
     }
 
     .menu__inner {
-        margin-top: 90px;
+        margin-top: 70px;
     }
 
     .project__inner__img {
@@ -2941,7 +3201,7 @@ button {
     .project__item__text {
         border-radius: 15px;
 
-        background: url(../img/prev-1.png);
+        background: url(../img/block-1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -2966,26 +3226,50 @@ button {
         margin-top: 10px;
     }
 
+    .project__item__text.one {
+        background: url(../img/block-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     .project__item__text.two {
-        background: url(../img/prev-2.png);
+        background: url(../img/ico-ido-1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .project__item__text.three {
-        background: url(../img/prev-3.png);
+        background: url(../img/daps-1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .project__item__text.four {
-        background: url(../img/prev-4.png);
+        background: url(../img/nft-1.png);
         background-size: cover;
         background-repeat: no-repeat;
     }
 
-    .project__item__text.five {
-        background: url(../img/prev-5.png);
+    .project__item__text.five{
+        background: url(../img/wallets-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .project__item__text.six{
+        background: url(../img/cryptography-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .project__item__text.seven{
+        background: url(../img/gaming-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .project__item__text.eight{
+        background: url(../img/sm-1-min.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -3016,7 +3300,7 @@ button {
     }
 
     .project__image__inner {
-        margin-bottom: 60px;
+        margin-bottom: 20px;
     }
 
     .project__about__title {
@@ -3050,7 +3334,7 @@ button {
 
     .footer__inner {
         padding-top: 40px;
-        padding-bottom: 40px;
+        padding-bottom: 0px;
     }
 
     .cube__item__img__adaptive {
@@ -3309,10 +3593,6 @@ button {
     .main__map__address {
         font-size: 15px;
     }
-
-    .main__map__address {
-        width: 130px;
-    }
     
     .google__map__inner {
         display: block;
@@ -3398,6 +3678,21 @@ button {
         margin-bottom: 20px;
     }
 
+    .project__image {
+        margin-top: 0;
+    }
+
+    .intro {
+        background-size: auto 100%;
+    }
+
+    .about__title.partners {
+        margin-top: 60px;
+    }
+
+    .slider__text {
+        padding-top: 30px;
+    }
 }
 
 @media (max-width: 460px) {
@@ -3407,6 +3702,10 @@ button {
 
         background: url(../img/adaptive-bk-1.png);
         background-position: center center;
+    }
+    
+    .google__map__text__item__1 {
+        margin-bottom: 40px;
     }
     
     .intro__inner {
@@ -3442,6 +3741,11 @@ button {
     .main__map {
         margin-top: 50px;
     }
+
+    
+    .intro {
+        background-size: auto 100%;
+    } 
 }
 
 @media (max-width: 380px) {
@@ -3493,8 +3797,6 @@ button {
     }
 
     .footer__item__title__up {
-        display: flex;
-        align-items: center;
         margin-bottom: 40px;
     }
     
@@ -3503,7 +3805,7 @@ button {
     }
 
     .footer__item__link.social {
-        margin-right: 50px;
+        margin-bottom: 40px;
     }
 
     .footer__item__link {
@@ -3512,7 +3814,7 @@ button {
 
     .footer__inner {
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 10px;
     }
     
     .project__dop__arrow {
